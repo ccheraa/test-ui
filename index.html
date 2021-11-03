@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Test UI</title>
+</head>
+<body class="sans-serif">
+  <!-- login form -->
+  <div class="card content">
+    <div class="title">Login</div>
+    <form id="login-form">
+      <label for="username-input">Username:</label>
+      <input type="text" name="username" id="username-input">
+      <label for="password-input">Password:</label>
+      <input type="password" name="password" id="password-input">
+      <input type="submit" value="Login">
+      <div class="message error" style="display: none;">Wrong username/password. try again</div>
+      <div class="message success" style="display: none;">Successfully logged in. Welcome back.</div>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
