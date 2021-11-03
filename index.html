@@ -18,9 +18,28 @@
       <label for="password-input">Password:</label>
       <input type="password" name="password" id="password-input">
       <input type="submit" value="Login">
-      <div class="message error" style="display: none;">Wrong username/password. try again</div>
-      <div class="message success" style="display: none;">Successfully logged in. Welcome back.</div>
+      <div class="message bg-error error" style="display: none;">Wrong username/password. try again</div>
+      <div class="message bg-success success" style="display: none;">Successfully logged in. Welcome back.</div>
     </form>
+  </div>
+  <!-- drag and drop -->
+  <div class="card">
+    <div class="title">Drag &amp; Drop</div>
+    <div id="dnd">
+      <div class="list" id="fruits">
+        <div class="title">Fruits</div>
+        <div class="item" draggable="true" id="fruit-1">Orange</div>
+        <div class="item" draggable="true" id="fruit-2">Apple</div>
+        <div class="item" draggable="true" id="fruit-3">Banana</div>
+        <div class="item" draggable="true" id="fruit-4">Pineapple</div>
+        <div class="item" draggable="true" id="fruit-5">Pear</div>
+        <div class="item" draggable="true" id="fruit-6">Strawberry</div>
+        <div class="item" draggable="true" id="fruit-7">Mango</div>
+      </div>
+      <div class="list" id="shopping-list">
+        <div class="title">Shopping list</div>
+      </div>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
