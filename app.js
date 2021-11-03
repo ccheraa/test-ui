@@ -41,4 +41,21 @@ $(function() {
       $('#' + target).append($('#' + fruit));
     }
   });
+
+  $('#api-button1').click(function() {
+    $.get('http://httpstat.us/200').done(function(result) {
+      $('#api-message1').html(result);
+    });
+  });
+  $('#api-button2').click(function() {
+    $.get('http://httpstat.us/500').fail(function(result) {
+      console.log(result)
+      $('#api-message2').html(result.status + '<br/>' + result.statusText);
+    });
+  });
+  $('#api-button3').click(function() {
+    $.get('http://not-a-website.com/').fail(function(result) {
+      $('#api-message3').html(result.status + '<br/>' + result.statusText);
+    });
+  });
 });

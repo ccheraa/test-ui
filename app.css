@@ -14,7 +14,7 @@ input {
   margin: 8px auto;
 }
 .message {
-  border-radius: 2em;
+  border-radius: 1em;
   border: 1px solid;
   padding: 6px 12px;
   margin-bottom: 8px;
