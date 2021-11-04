@@ -1,0 +1,19 @@
+{
+  "name": "test-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ccheraa/test-ui.git",
+  "author": "Charafeddine Cheraa <ccheraa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test:chrome": "testcafe chrome test/*.test.ts",
+    "test:firefox": "testcafe firefox test/*.test.ts",
+    "test:edge": "testcafe edge test/*.test.ts",
+    "test:safari": "testcafe safari test/*.test.ts",
+    "test:ie": "testcafe ie test/*.test.ts",
+    "test": "testcafe all test/*.test.ts"
+  },
+  "devDependencies": {
+    "testcafe": "^1.17.0"
+  }
+}

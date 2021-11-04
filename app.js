@@ -8,8 +8,8 @@ $(function() {
       var successMessage = $('.success', this);
       successMessage.show();
       setTimeout(function() {
-        successMessage.fadeOut(1000);
-      }, 3000);
+        successMessage.fadeOut(400);
+      }, 1000);
     } else {
       $('.error', this).show();
       $('#username-input').val('').focus();
@@ -48,13 +48,20 @@ $(function() {
   });
   $('#api-button2').click(function() {
     $.get('http://httpstat.us/500').fail(function(result) {
-      console.log(result)
       $('#api-message2').html(result.status + '<br/>' + result.statusText);
     });
   });
   $('#api-button3').click(function() {
-    $.get('http://not-a-website.com/').fail(function(result) {
+    $.get('/not-found').fail(function(result) {
       $('#api-message3').html(result.status + '<br/>' + result.statusText);
     });
+  });
+  $('#api-button4').click(function() {
+    $.get('/not-found-2')
+      .fail(function(result) {
+        $('#api-message4').html(result.status + '\n' + result.statusText);
+      }).done(function(result) {
+        $('#api-message4').html(result);
+      });
   });
 });
